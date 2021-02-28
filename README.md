@@ -1,2 +1,2 @@
 # CollegeSpace
-Socio Academic Portal for academic needs in college
+Socio Academic Portal for College Students
