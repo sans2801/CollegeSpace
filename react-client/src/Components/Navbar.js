@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "./Button";
+import { Button } from "./Homepage/Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
@@ -60,9 +60,9 @@ function Navbar() {
               </Link>
             </li>
 
-            <li>
+            <li className="nav-item">
               <Link
-                to="/sign-up"
+                to="/Signup"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
