@@ -4,7 +4,7 @@ import FormSuccess from "./FormSuccess";
 import "./Form.css";
 import login from "./login";
 
-const Form = () => {
+const Form = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   function submitForm() {
     setIsSubmitted(true);
@@ -20,7 +20,7 @@ const Form = () => {
             className="form-img"
           />
         </div>
-        {!isSubmitted ? <Signup submitForm={submitForm} /> : <FormSuccess />}
+        {!isSubmitted ? <Signup submitForm={submitForm} user={props.user} onChange={props.onChange}/> : <FormSuccess />}
       </div>
     </>
   );

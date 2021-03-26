@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./login.css";
 import LoginForm from "./LoginForm";
 
-const Login = () => {
+const Login = (props) => {
   const adminUser = {
     email: "admin@admin.com",
     password: "admin123",
@@ -43,7 +43,7 @@ const Login = () => {
           <button onClick={Logout}>Logout</button>
         </div>
       ) : (
-        <LoginForm Login={Login} error={error} />
+        <LoginForm Login={Login} error={error} user={props.user} onChange={props.onChange} />
       )}
     </div>
   );

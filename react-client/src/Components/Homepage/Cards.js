@@ -2,10 +2,10 @@ import React from "react";
 import "./Cards.css";
 import Carditem from "./Carditem";
 
-function Cards() {
+function Cards(props) {
   return (
     <div className="cards">
-      <h1>Explore CollegeSpace!</h1>
+      {props.user ? <h1>Hello {props.user.displayName}, Explore CollegeSpace!</h1> : <h1>Explore CollegeSpace!</h1>}
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">

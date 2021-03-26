@@ -1,22 +1,52 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import Navbar from "./Components/Navbar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/pages/Home";
 import Form from "./Components/Signup/Form";
-import login from "./Components/Signup/login";
+import Login from "./Components/Signup/login";
+
+import axios from 'axios';
+
 
 function App() {
+  const [user,setUser] = useState(null);
+
+  useEffect(()=>{
+     axios.get('http://localhost:3001/users/currentUser').then((res)=>{
+     setUser(res.data.user);
+    });
+  },[]);
+
+  function handleUser(val)
+  {
+    setUser(val);
+  }
+
   return (
     <>
       <Router>
-        <Navbar />
+        <Navbar user={user} onChange={handleUser}/>
+
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route exact path="/Signup" exact component={Form} />
-          <Route exact path="/login" exact component={login} />
+          
+          <Route exact path="/">
+            <Home user={user}/>
+          </Route>
+
+          <Route exact path="/Signup">
+            { user ? <Redirect to="/"/> : <Form user={user} onChange={handleUser}/> } 
+          </Route>
+
+
+          <Route exact path="/login">
+           { user ? <Redirect to="/"/> : <Login user={user} onChange={handleUser}/> }
+          </Route> 
+
         </Switch>
+
       </Router>
+
     </>
   );
 }

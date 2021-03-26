@@ -1,17 +1,50 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router";
+import axios from 'axios';
 
-function LoginForm({ Login, error }) {
+
+function LoginForm(props) {
+
   const [details, setDetails] = useState({ name: "", email: "", password: "" });
+  const [isPending,setIsPending]=useState(false);
+  const [error,setError]=useState(null);
+
+  const history =useHistory();
+
   const submitHandler = (e) => {
+    
     e.preventDefault();
 
-    Login(details);
+    setIsPending(true);
+    const email=details.email;
+    const password=details.password
+    const userAuth={email,password};
+
+    axios.post('http://localhost:3001/users/express-login',userAuth).then((res)=>{
+        
+        if(res.data.error)
+            throw Error(res.data.error);
+        
+        props.onChange(res.data.user);
+            setIsPending(false);
+            history.push('/');
+    
+            
+        }).catch((err)=>{
+            setIsPending(false);
+          setError(err.message);
+        });
+
+     props.Login(details);
   };
+
+
+
   return (
     <form onSubmit={submitHandler}>
       <div className="form-inner">
         <h2>Login</h2>
-        {error != "" ? <div className="error">{error}</div> : ""}
+        {error && <small>{error}</small>}
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
@@ -43,8 +76,13 @@ function LoginForm({ Login, error }) {
             }
             value={details.password}
           />
+
         </div>
-        <input type="submit" value="LOGIN" />
+
+        {!isPending && <input type="submit" value="LOGIN" />}
+        {isPending && <input disabled type="submit" value="LOGGING IN..." />}
+
+        
       </div>
     </form>
   );

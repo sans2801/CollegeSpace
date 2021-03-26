@@ -4,11 +4,11 @@ import Cards from "../Homepage/Cards";
 import Footer from "../Homepage/Footer";
 import HeroSection from "../Homepage/herosection";
 
-function Home() {
+function Home(props) {
   return (
     <>
       <HeroSection />
-      <Cards />
+      <Cards user={props.user}/>
       <Footer />
     </>
   );

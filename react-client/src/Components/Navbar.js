@@ -1,11 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "./Homepage/Button";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Navbar.css";
+import axios from 'axios'
 
-function Navbar() {
+function Navbar(props) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+
+  const history=useHistory();
+    const handleLogout = () =>{
+      if(props.user)
+      {
+        axios.post('http://localhost:3001/users/express-logout').then((res)=>{
+          props.onChange(null);
+          history.push('/');
+        })
+      }
+    };
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -32,6 +44,7 @@ function Navbar() {
             V J T I {/* <i class="fab fa-typo3" /> */}|{" "}
             <i class="fas fa-landmark"></i>|
           </Link>
+
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
@@ -61,16 +74,25 @@ function Navbar() {
             </li>
 
             <li className="nav-item">
-              <Link
+              {!props.user && <Link
                 to="/Signup"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
                 Sign Up
-              </Link>
+              </Link>}
+
+              {props.user && <Link
+                className="nav-links-mobile"
+                onClick={handleLogout}
+              >
+                Logout
+              </Link>}
+
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
+          {button && !props.user && <Button buttonStyle="btn--outline">SIGN UP</Button>}
+          {button && props.user && <Button onClick={handleLogout} buttonStyle="btn--outline">LOG OUT</Button>}
         </div>
       </nav>
     </>
