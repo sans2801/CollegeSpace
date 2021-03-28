@@ -4,7 +4,7 @@ import Learnspace from './components/Learnspace/Learnspace';
 function App() {
   return (
     <div className="App">
-     <Learnspace />
+      <Learnspace />
     </div>
   );
 }

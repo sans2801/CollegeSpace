@@ -1,16 +1,9 @@
 import { Container, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@material-ui/core'
 import React from 'react'
-import { useForm } from '../UI elements/useForm'
 
-const initialValues = {
-    type: 'all',
-    year: 'all',
-    branch: 'all',
-}
 
-const Filters = () => {
-    const { values, setValues, handleChange } = useForm(initialValues)
 
+const Filters = ({ values, setValues, handleChange }) => {
 
     return (
             <FormControl component="fieldset">
@@ -39,6 +32,7 @@ const Filters = () => {
                     <FormControlLabel value="civil" control={<Radio />} label="Civil Engineering" />
                     <FormControlLabel value="mech" control={<Radio />} label="Mechnanical Engineering" />
                     <FormControlLabel value="text" control={<Radio />} label="Textile Engineering" />
+                    <FormControlLabel value="all" control={<Radio />} label="All" />
                 </RadioGroup>
             </FormControl>)
 }
