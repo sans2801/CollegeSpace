@@ -5,7 +5,11 @@ import Carditem from "./Carditem";
 function Cards(props) {
   return (
     <div className="cards">
-      {props.user ? <h1>Hello {props.user.displayName}, Explore CollegeSpace!</h1> : <h1>Explore CollegeSpace!</h1>}
+      {props.user ? (
+        <h1>Hello {props.user.displayName}, Explore CollegeSpace!</h1>
+      ) : (
+        <h1>Explore CollegeSpace!</h1>
+      )}
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
@@ -27,7 +31,7 @@ function Cards(props) {
               path="/services"
             />
             <Carditem
-              src="https://pbs.twimg.com/profile_images/1182361454072209408/VEaUkAkk_400x400.png"
+              src="https://media.istockphoto.com/photos/diverse-education-shoot-picture-id871461580?b=1&k=6&m=871461580&s=170667a&w=0&h=_8yav_XQjGnDKR_1tMb5sms63QDAvUw3OJaCmpy1_vQ="
               text="Societies and Clubs"
               path="/products"
             />

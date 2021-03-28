@@ -14,6 +14,7 @@ button {
 }
 
 .App {
+  background: url("Moutain_login.jpg") center center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -41,7 +42,7 @@ form:back {
 form .form-inner {
   position: relative;
   display: block;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   padding: 30px;
   z-index: 2;
 }

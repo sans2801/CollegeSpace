@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "../Homepage/Footer";
 import "./login.css";
 import LoginForm from "./LoginForm";
 
@@ -43,7 +44,12 @@ const Login = (props) => {
           <button onClick={Logout}>Logout</button>
         </div>
       ) : (
-        <LoginForm Login={Login} error={error} user={props.user} onChange={props.onChange} />
+        <LoginForm
+          Login={Login}
+          error={error}
+          user={props.user}
+          onChange={props.onChange}
+        />
       )}
     </div>
   );

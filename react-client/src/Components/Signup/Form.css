@@ -1,5 +1,11 @@
+.bg {
+  background: url("Moutain_signup.jpg") center center/cover no-repeat;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
 .form-container {
-  margin: 100px auto;
+  margin: auto;
   width: 1000px;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;
@@ -159,4 +165,15 @@
   text-decoration: none;
   color: #27cdff;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 1000px) {
+  div#collapse-spaceship {
+    display: none;
+  }
+
+  div.form-container {
+    display: flex;
+    justify-content: center;
+  }
 }

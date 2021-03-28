@@ -7,8 +7,9 @@ video {
 }
 
 .hero-container {
-  background: url("college.jpg") center center/cover no-repeat;
+  background: url("College.jpg") center center/cover no-repeat;
   height: 100vh;
+  margin-top: -80px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -18,10 +19,10 @@ video {
   object-fit: contain;
 }
 
-.hero-container > h1 {
+.hero-container > h2 {
   color: #fff;
   height: 170px;
-  font-size: 120px;
+  font-size: 70px;
   margin-top: 60px;
   text-align: center;
 }
