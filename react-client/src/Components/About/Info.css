@@ -1,0 +1,38 @@
+.supportbody {
+  background-color: black;
+  width: 100%;
+  /* justify-content: center; */
+  min-height: 40rem;
+  max-width: auto;
+  margin: auto;
+}
+
+.supportbody .description > h1 {
+  display: flexbox;
+  color: cornsilk;
+  text-align: center;
+  padding-top: 100px;
+  font-size: 35px;
+}
+
+.supportbody .description.active > h1 {
+  font-size: 25px;
+}
+
+.supportbody > h1 span {
+  color: #fb2020;
+}
+.supportbody .supportfooter .email {
+  color: #fb2020;
+  text-decoration: underline overline #fb2020;
+  margin-top: 10px;
+  text-underline-offset: 0.4em;
+}
+.supportbody .supportfooter > h3 {
+  color: cornsilk;
+  text-align: center;
+  font-size: 32px;
+}
+.supportfooter {
+  margin-top: 3%;
+}

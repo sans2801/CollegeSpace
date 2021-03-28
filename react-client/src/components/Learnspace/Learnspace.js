@@ -96,7 +96,6 @@ const Learnspace = () => {
         includeScore: true,
     })
     const results = fuse.search(query)
-
     
     const contentResults = query ? results: contentList;
     console.log(contentResults)
