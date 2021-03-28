@@ -108,4 +108,36 @@ router.post('/express-logout', (req,res,next)=>{
   });
 });
 
+router.get('/getbooks',(req,res,next)=>{
+  const user = firebase.auth().currentUser;
+  if(user===null) res.json({error:'User not found'});
+
+    db.collection('books2').get().then((querySnapshot)=>{
+      const material = [];
+      querySnapshot.forEach((doc)=>{
+        material.push(doc.data());
+      });
+      res.send(material);
+    }).catch((err)=>{
+      res.send({error:err.message});
+    })
+});
+
+router.post('/feedback',(req,res,next)=>{
+
+  if(firebase.auth().currentUser==null) res.json({error:"User not found"});
+  else
+  {
+    const user=firebase.auth().currentUser;
+    const form = req.body;
+    console.log(form);
+    db.collection('feedback').doc(user.email).get().then((data)=>{
+      res.send(data.data());
+    })
+    .catch((err)=>{
+      res.json({error:err.message});
+    });
+  }
+});
+
 module.exports = router;

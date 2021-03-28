@@ -63,11 +63,9 @@ function App() {
           </Route>
 
           <Route exact path="/support">
-            {user ? (
-              <Redirect to="/" />
-            ) : (
+
               <Support user={user} onChange={handleUser} />
-            )}
+          
           </Route>
         </Switch>
       </Router>

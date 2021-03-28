@@ -1,38 +1,34 @@
 import React, { useState, useEffect } from "react";
+import axios from 'axios';
 import "./Contact.css";
-import { db } from "./firebase";
 
 const Contact = () => {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
+  const [error, setError] =useState(null);
+  const [isPending, setIsPending] = useState(false);
   const [loader, setLoader] = useState(false);
 
   const handleSubmit = (e) => {
+    setIsPending(true);
     e.preventDefault();
+    if(name=="") {alert("Enter your name");return;}
+    if(message=="") {alert("Enter your message");return;}
 
-    db.collection("contacts")
-      .add({
-        name: name,
-        email: email,
-        message: message,
-      })
-      .then(() => {
-        alert("Message has been submitted!");
-        setLoader(false);
-      })
-      .catch((error) => {
-        alert(error.message);
-        setLoader(false);
-      });
+    axios.post('http://localhost:3001/users/feedback',{name,message}).then((res)=>{
+      if(res.data.error) throw Error(res.data.error)
+      console.log(res.data);
+      setIsPending(false);
+      setError(res.data.message);
 
-    setName("");
-    setEmail("");
-    setMessage("");
+    }).catch((err)=>{
+      setIsPending(false);
+      setError(err.message);
+    })
+
   };
   return (
-    <form id="form" className="forms">
+    <form id="form" className="forms" onSubmit={handleSubmit}>
       <h1>Let's Talk &#128242;</h1>
 
       <label>Name</label>
@@ -40,13 +36,6 @@ const Contact = () => {
         placeholder="Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
-      />
-
-      <label>Email</label>
-      <input
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
       />
 
       <label>Message</label>
@@ -62,6 +51,11 @@ const Contact = () => {
       >
         Submit
       </button>
+
+      
+      {error && <small style={{color:'white',}}>{error}</small>}
+      {!isPending && <small>Sending...</small>}
+
     </form>
   );
 };
