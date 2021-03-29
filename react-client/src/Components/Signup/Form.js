@@ -15,7 +15,7 @@ const Form = (props) => {
     <div className="bg">
       <div className="form-container">
         {/* <span className="close-btn">x</span> */}
-        <div className="form-content-left" id="collapse-spaceship">
+        <div className="form-content-left hidden" id="collapse-spaceship">
           <img
             src="https://raw.githubusercontent.com/briancodex/react-form-v1/286f4a4603bda257ae001dc57c74d7f30bd4eedb/public/img/img-2.svg"
             alt="spaceship"

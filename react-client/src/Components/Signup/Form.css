@@ -5,8 +5,9 @@
 }
 
 .form-container {
-  margin: auto;
-  width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   border-radius: 10px;
@@ -113,7 +114,7 @@
 
 .form-input {
   display: block;
-  background-color: rgb(241, 166, 166);
+  background-color: cornsilk;
   padding-left: 10px;
   outline: none;
   border-radius: 2px;
@@ -167,13 +168,30 @@
   font-weight: 600;
 }
 
+@media only screen and (min-width: 1300px) {
+  .form-container {
+    width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .form-container {
+    width: 94%;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   div#collapse-spaceship {
     display: none;
   }
 
-  div.form-container {
-    display: flex;
-    justify-content: center;
+  .form-container {
+    display: grid;
+    grid-template-columns: 1fr 0;
+  }
+  .form-content-right {
+    width: 100%;
+    display: absolute;
+    border-radius: 10px 10px;
   }
 }
