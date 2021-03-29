@@ -1,3 +1,5 @@
+import './App.css';
+import Learnspace from './components/Learnspace/Learnspace';
 import React, { useState, useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import {
@@ -6,7 +8,6 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import "./App.css";
 import Home from "./Components/pages/Home";
 import Form from "./Components/Signup/Form";
 import Login from "./Components/Signup/login";
@@ -37,6 +38,8 @@ function App() {
           <Route exact path="/">
             <Home user={user} />
           </Route>
+
+          <Route exact path="/learnspace"><Learnspace /></Route>
 
           <Route exact path="/Signup">
             {user ? (
