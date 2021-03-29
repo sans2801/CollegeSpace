@@ -1,5 +1,4 @@
-import './App.css';
-import Learnspace from './components/Learnspace/Learnspace';
+import "./App.css";
 import React, { useState, useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import {
@@ -15,6 +14,7 @@ import Login from "./Components/Signup/login";
 import axios from "axios";
 import About from "./Components/About/About";
 import Support from "./Components/Support/Support";
+import Head from "./Components/Learnspace/Head";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -39,7 +39,9 @@ function App() {
             <Home user={user} />
           </Route>
 
-          <Route exact path="/learnspace"><Learnspace /></Route>
+          <Route exact path="/learnspace">
+            <Head />
+          </Route>
 
           <Route exact path="/Signup">
             {user ? (
@@ -66,9 +68,7 @@ function App() {
           </Route>
 
           <Route exact path="/support">
-
-              <Support user={user} onChange={handleUser} />
-          
+            <Support user={user} onChange={handleUser} />
           </Route>
         </Switch>
       </Router>
