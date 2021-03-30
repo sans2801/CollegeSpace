@@ -15,6 +15,8 @@ import axios from "axios";
 import About from "./Components/About/About";
 import Support from "./Components/Support/Support";
 import Head from "./Components/Learnspace/Head";
+import pedia from "./Components/Vjtipedia/Pedia";
+import Pedia from "./Components/Vjtipedia/Pedia";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -69,6 +71,10 @@ function App() {
 
           <Route exact path="/support">
             <Support user={user} onChange={handleUser} />
+          </Route>
+
+          <Route exact path="/vjtipedia">
+            <Pedia />
           </Route>
         </Switch>
       </Router>

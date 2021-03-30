@@ -13,6 +13,7 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import ContentCard_item from "./ContentCard_item";
+import { Grid } from "@material-ui/core";
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -23,7 +24,7 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-const ContentCard = (props) => {
+const ContentCard = ({ contentList }) => {
   const classes = useStyle();
   const [elevation, setElevation] = useState(2);
 
@@ -70,33 +71,27 @@ const ContentCard = (props) => {
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
-            <ContentCard_item
-              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZWR1Y2F0aW9uJTIwdGVjaG5vbG9neXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
-              text="LearnSpace | Resource Library"
-              path="/learnspace"
+            <Grid container direction="row">
+              {contentList.map((content) => (
+                <Grid item xs={6} md={4} lg={3} xl={3}>
+                  <ContentCard_item
+                    src="https://images-na.ssl-images-amazon.com/images/I/41T0iBxY8FL._SX440_BO1,204,203,200_.jpg"
+                    text={content.name}
+                    description={content.author}
+                    path={content.url}
+                  />
+                </Grid>
+              ))}
+              {/* <ContentCard_item
+              src="https://images-na.ssl-images-amazon.com/images/I/41T0iBxY8FL._SX440_BO1,204,203,200_.jpg"
+              text={contentList[0].name}
+              description={["By CLRS"]}
             />
             <ContentCard_item
-              src="https://images.unsplash.com/photo-1521898284481-a5ec348cb555?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-              text="ChatSpace | Discuss Among your classmates"
-              path="/services"
-            />
-          </ul>
-          <ul className="cards__items">
-            <ContentCard_item
-              src="https://www.dscvjti.tech/assets/images/AboutVJTI.png"
-              text="VJTIPedia | Campus, Faculties & Societies"
-              path="/services"
-            />
-            <ContentCard_item
-              src="https://media.istockphoto.com/photos/diverse-education-shoot-picture-id871461580?b=1&k=6&m=871461580&s=170667a&w=0&h=_8yav_XQjGnDKR_1tMb5sms63QDAvUw3OJaCmpy1_vQ="
-              text="Societies and Clubs"
-              path="/products"
-            />
-            <ContentCard_item
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8YnVpbGRpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
-              text="Internships and Placement Stories"
-              path="/sign-up"
-            />
+              src="https://scontent.fpnq13-1.fna.fbcdn.net/v/t1.0-9/22140753_918775148272812_8263574953368137870_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=3mMsAu_7IkYAX_3p3ZP&_nc_ht=scontent.fpnq13-1.fna&oh=409b25c462aec1c12b5568678973b54f&oe=60853D60"
+              text="Operating Systems"
+              description={["By Galvin"]} */}
+            </Grid>
           </ul>
         </div>
       </div>

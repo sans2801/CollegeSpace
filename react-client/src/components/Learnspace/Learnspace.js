@@ -87,9 +87,8 @@ const Learnspace = () => {
     axios.get("http://localhost:3001/users/getbooks").then((response) => {
       // console.log(response.data);
       setContentList(response.data);
-      console.log(contentList);
     });
-  }, [contentList]);
+  }, []);
 
   const classes = useStyles();
   const [query, setQuery] = useState("");
@@ -111,19 +110,34 @@ const Learnspace = () => {
   const open = Boolean(anchorE1);
 
   const fuse = new Fuse(contentList, {
-    keys: ["title", "author"],
+    keys: ["name", "author"],
     includeScore: true,
   });
   const results = fuse.search(query);
-
-  const contentResults = query ? results : contentList;
+  const resultsItem = results.map((content) => content.item);
+  const contentResults = query ? resultsItem : contentList;
+  // setContentList(contentResults);
   // console.log(contentResults);
-  // const filterByType = (values.type !== 'all') ? contentResults.filter(content => content.type === values.type):  contentResults;
-  // const filterByBranch = (values.branch !== 'all') ? filterByType.filter(content => content.branch === values.branch):  filterByType;
-  // const filterByYear = (values.branch !== 'all') ? filterByBranch.filter(content => content.year === values.year):  filterByBranch;
+  const filterByType =
+    values.type === "all"
+      ? contentResults
+      : contentResults.filter((content) => content.type === values.type);
 
-  console.log(values.type);
-  console.log(results);
+  console.log(values.type, filterByType, "filterByType");
+  const filterByBranch =
+    values.branch === "all"
+      ? filterByType
+      : filterByType.filter((content) => content.branch === values.branch);
+
+  console.log(values.branch, filterByBranch, "filterByBranch");
+  console.log(filterByType, "filterByType");
+  const filterByYear =
+    values.year === "all"
+      ? filterByBranch
+      : filterByBranch.filter((content) => content.year === values.year);
+  console.log(values.year, filterByYear, "filterByYear");
+  console.log(contentResults);
+  // console.log(results);
   const handleOnRequestSearch = () => {
     // console.log(filterByYear)
   };
@@ -135,7 +149,7 @@ const Learnspace = () => {
           <SearchBar
             name="query"
             value={query}
-            onChange={handleOnChange}
+            onClick={handleOnChange}
             onRequestSearch={handleOnRequestSearch}
           />
           <Button onClick={handleOnClick}>
@@ -170,7 +184,7 @@ const Learnspace = () => {
           </Popover>
         </Toolbar>
       </AppBar>
-      <ContentCard />
+      <ContentCard contentList={filterByYear} />
     </div>
   );
 };

@@ -28,7 +28,7 @@ function Cards(props) {
             <Carditem
               src="https://www.dscvjti.tech/assets/images/AboutVJTI.png"
               text="VJTIPedia | Campus, Faculties & Societies"
-              path="/services"
+              path="/vjtipedia"
             />
             <Carditem
               src="https://media.istockphoto.com/photos/diverse-education-shoot-picture-id871461580?b=1&k=6&m=871461580&s=170667a&w=0&h=_8yav_XQjGnDKR_1tMb5sms63QDAvUw3OJaCmpy1_vQ="
