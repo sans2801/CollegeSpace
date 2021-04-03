@@ -32,22 +32,6 @@ const Pedia_info = () => {
         </h1>
       </div>
 
-      {/* <button
-        onClick="location.href='http://vjtimumbai.in';"
-        type="submit"
-        style={{ background: loader ? "#ccc" : "rgb(2,2,110)" }}
-      >
-        Know More
-      </button> */}
-
-      {/* <a
-        href="https://vjtimumbai.in"
-        className="btn btn-primary"
-        style={{ background: loader ? "#ccc" : "rgb(2,2,110)" }}
-        target="_blank"
-      >
-        KNOW MORE
-      </a> */}
       <Container>
         <a class="btn-mobile" href="https://vjtimumbai.in">
           <button class="btn btn--outline btn--medium">Know More</button>

@@ -37,39 +37,8 @@ const ContentCard = ({ contentList }) => {
   };
 
   return (
-    <Card
-    //   className={classes.root}
-    //   elevation={`${elevation}`}
-    //   onMouseEnter={handleOnHover}
-    //   onMouseLeave={handleonMouseLeave}
-    >
-      {/* <CardHeader
-        action={
-          <IconButton>
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title="B.P.Lathi"
-        subheader="Signals and System"
-      />
-      <CardContent>
-        <Typography variant="body1" color="textPrimary" component="p">
-          <ul>
-            <li>Second Year</li>
-            <li>Jamkar Padho</li>
-          </ul>
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-      </CardActions> */}
+    <Card>
       <div className="cards__container">
-        {/* <div className="cards__wrapper"> */}
         <ul className="cards__items">
           <Grid container direction="row">
             {contentList.length > 1 ? (
@@ -88,19 +57,8 @@ const ContentCard = ({ contentList }) => {
                 <h2>Your search doesn't have any matching results</h2>
               </div>
             )}
-
-            {/* <ContentCard_item
-              src="https://images-na.ssl-images-amazon.com/images/I/41T0iBxY8FL._SX440_BO1,204,203,200_.jpg"
-              text={contentList[0].name}
-              description={["By CLRS"]}
-            />
-            <ContentCard_item
-              src="https://scontent.fpnq13-1.fna.fbcdn.net/v/t1.0-9/22140753_918775148272812_8263574953368137870_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=3mMsAu_7IkYAX_3p3ZP&_nc_ht=scontent.fpnq13-1.fna&oh=409b25c462aec1c12b5568678973b54f&oe=60853D60"
-              text="Operating Systems"
-              description={["By Galvin"]} */}
           </Grid>
         </ul>
-        {/* </div> */}
       </div>
     </Card>
   );

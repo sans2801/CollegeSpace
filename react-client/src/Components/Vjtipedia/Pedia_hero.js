@@ -11,20 +11,20 @@ const Pedia_hero = () => {
   });
   return (
     <div className="pedia-container">
-      {/* <video src="/videos/video-1.mp4" autoPlay loop muted /> */}
-      {/* <img src="college.jpg" alt="college" /> */}
-      {/* <h1>Hi there!</h1> */}
       <h1>
         <Typical
-          steps={["Hi There!", 1000, "Thanks for visiting!", 1000]}
+          steps={[
+            "Established in 1887",
+            1000,
+            "Strengthening Technology Excellence of Country",
+            1000,
+          ]}
           loop={Infinity}
           wrapper="p"
         />
       </h1>
       <div className="pedia-btns">
         <p>
-          {/* Get Started <i class="fa fa-arrow-down" aria-hidden="true" /> */}
-          {/* <i class="fas fa-angle-double-down"></i> */}
           <Arrow />
         </p>
       </div>

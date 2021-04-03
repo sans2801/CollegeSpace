@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Homepage/Footer";
 import Learnspace from "./Learnspace";
 import Learn_hero from "./Learn_hero";
 
@@ -12,6 +13,7 @@ const Head = () => {
     <div>
       <Learn_hero />
       <Learnspace />
+      <Footer />
     </div>
   );
 };

@@ -11,6 +11,7 @@ export default function validateInfo(values) {
     errors.email = "Email address is invalid";
   }
 
+  //Password
   if (!values.password) {
     errors.password = "Password is required";
   } else if (values.password.length < 6) {

@@ -13,9 +13,6 @@ const Support_hero = () => {
 
   return (
     <div className="hero-container-support">
-      {/* <video src="/videos/video-1.mp4" autoPlay loop muted /> */}
-      {/* <img src="college.jpg" alt="college" /> */}
-      {/* <h1>Hi there!</h1> */}
       <h1>
         <Typical
           steps={["Any queries?", 1000, "Let Us Know!", 1000]}
@@ -25,8 +22,6 @@ const Support_hero = () => {
       </h1>
       <div className="heroa-btns">
         <p>
-          {/* Get Started <i class="fa fa-arrow-down" aria-hidden="true" /> */}
-          {/* <i class="fas fa-angle-double-down"></i> */}
           <Arrow />
         </p>
       </div>
