@@ -3,6 +3,7 @@ import "../../App.css";
 import { Button } from "./Button";
 import "./herosection.css";
 import Typical from "react-typical";
+import Arrow from "../UI elements/Arrow";
 
 function herosection() {
   return (
@@ -12,7 +13,7 @@ function herosection() {
       <h2>
         <Typical
           steps={["Welcome to CollegeSpace!", 1000]}
-          loop={1}
+          loop={3}
           wrapper="b"
         />
       </h2>
@@ -25,7 +26,8 @@ function herosection() {
         ></Button> */}
         <p>
           {/* Get Started <i class="fa fa-arrow-down" aria-hidden="true" /> */}
-          <i class="fas fa-angle-double-down"></i>
+          {/* <i class="fas fa-angle-double-down"></i> */}
+          <Arrow />
         </p>
       </div>
     </div>

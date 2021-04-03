@@ -1,29 +1,22 @@
 import React from "react";
 import Typical from "react-typical";
-import Contact from "./Contact";
-import "./Support_hero.css";
+import "./Society_hero.css";
 import Arrow from "../UI elements/Arrow";
 
-const Support_hero = () => {
-  window.scroll({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
-
+const Society_hero = () => {
   return (
-    <div className="hero-container-support">
+    <div className="society-container">
       {/* <video src="/videos/video-1.mp4" autoPlay loop muted /> */}
       {/* <img src="college.jpg" alt="college" /> */}
       {/* <h1>Hi there!</h1> */}
       <h1>
         <Typical
-          steps={["Any queries?", 1000, "Let Us Know!", 1000]}
+          steps={["Hi There!", 1000, "Thanks for visiting!", 1000]}
           loop={Infinity}
-          wrapper="b"
+          wrapper="p"
         />
       </h1>
-      <div className="heroa-btns">
+      <div className="society-btns">
         <p>
           {/* Get Started <i class="fa fa-arrow-down" aria-hidden="true" /> */}
           {/* <i class="fas fa-angle-double-down"></i> */}
@@ -34,4 +27,4 @@ const Support_hero = () => {
   );
 };
 
-export default Support_hero;
+export default Society_hero;

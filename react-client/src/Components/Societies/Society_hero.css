@@ -6,8 +6,8 @@ video {
   z-index: -1;
 }
 
-.herol-container {
-  background: url("./learnspace.jpg") center center/cover no-repeat;
+.society-container {
+  background: url("./societies.jpg") center center/cover no-repeat;
   height: 100vh;
   width: 100%;
   margin-top: -80px;
@@ -19,7 +19,7 @@ video {
   object-fit: contain;
 }
 
-.herol-container > h1 {
+.society-container > h1 {
   color: #fff;
   height: 170px;
   font-size: 120px;
@@ -32,7 +32,7 @@ p {
   font-size: 60px;
 }
 
-.herol-container > p {
+.society-container > p {
   text-align: center;
   color: #fff;
   font-size: 64px;
@@ -41,18 +41,18 @@ p {
     "Lucida Sans", Arial, sans-serif;
 }
 
-.herol-btns {
+.society-btns {
   background-color: transparent;
   margin-top: 32px;
   justify-content: center;
   text-align: center;
 }
 
-.herol-btns .btn > p {
+.society-btns .btn > p {
   color: rgb(255, 255, 255);
 }
 
-.herol-btns .btn {
+.society-btns .btn {
   background-color: transparent;
   margin: 6px;
 }
@@ -62,19 +62,19 @@ p {
 }
 
 @media screen and (max-width: 960px) {
-  .herol-container > h1 {
+  .society-container > h1 {
     font-size: 70px;
     margin-top: -150px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .herol-container > h1 {
+  .society-container > h1 {
     font-size: 50px;
     margin-top: -100px;
   }
 
-  .herol-container > p {
+  .society-container > p {
     font-size: 30px;
   }
 

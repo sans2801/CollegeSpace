@@ -10,6 +10,7 @@ import {
   Button,
   Paper,
   Container,
+  Grid,
 } from "@material-ui/core";
 import SearchBar from "material-ui-search-bar";
 import React, { useState, useEffect } from "react";
@@ -58,7 +59,7 @@ const initialContentList = [
 const allFilters = {
   type: "all",
   year: "all",
-  branch: "all",
+  branch: ["all"],
 };
 
 // MUI Styles
@@ -66,16 +67,28 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
+    "& .MuiToolBar-root": {
+      justifyContent: "center",
+    },
   },
   paper: {
     background: "white",
     color: "black",
+    paddingBottom: "50px",
+    paddingTop: "30px",
     "& .MuiPaper-root": {
-      borderRadius: "50px",
       flexGrow: 1,
-      margin: "0 25px",
       background: "#f6f6f6",
+      justifyContent: "space-between",
+      backgroundColor: "rgb(236, 234, 234)",
+      color: "white",
     },
+    "& .MuiInputBase-input": {
+      color: "black",
+    },
+  },
+  search: {
+    maxWidth: "1000px",
   },
 }));
 
@@ -85,7 +98,7 @@ const Learnspace = () => {
 
   useEffect(() => {
     axios.get("http://localhost:3001/users/getbooks").then((response) => {
-      // console.log(response.data);
+      console.log(response.data);
       setContentList(response.data);
     });
   }, []);
@@ -103,8 +116,12 @@ const Learnspace = () => {
     setAnchorE1(null);
   };
 
-  const handleOnChange = (event) => {
+  const handleRequestSearch = (event) => {
     setQuery(event);
+  };
+
+  const handleCancelSearch = (event) => {
+    setQuery("");
   };
 
   const open = Boolean(anchorE1);
@@ -125,9 +142,16 @@ const Learnspace = () => {
 
   console.log(values.type, filterByType, "filterByType");
   const filterByBranch =
-    values.branch === "all"
+    values.branch[0] === "all"
       ? filterByType
-      : filterByType.filter((content) => content.branch === values.branch);
+      : filterByType.filter((content) => {
+          var br = true;
+          br = br && content.branch[0] === values.branch[0];
+          if (content.branch.length > 1) {
+            br = br || content.branch[1] === values.branch[0];
+          }
+          return br;
+        });
 
   console.log(values.branch, filterByBranch, "filterByBranch");
   console.log(filterByType, "filterByType");
@@ -145,45 +169,58 @@ const Learnspace = () => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar className={classes.paper}>
-          <Typography>Back to CollegeSpace</Typography>
-          <SearchBar
-            name="query"
-            value={query}
-            onClick={handleOnChange}
-            onRequestSearch={handleOnRequestSearch}
-          />
-          <Button onClick={handleOnClick}>
-            <TuneIcon />
-          </Button>
-          <Popover
-            open={open}
-            anchorE1={anchorE1}
-            onClose={handleClose}
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "center",
-            }}
-            transformOrigin={{
-              vertical: "bottom",
-              horizontal: "center",
-            }}
-          >
-            <Paper
-              style={{
-                padding: "20px",
-                background: "#f6f6f6",
-                maxWidth: "900px",
-              }}
-            >
-              <Filters
-                values={values}
-                setValues={setValues}
-                handleChange={handleChange}
+          <Grid container>
+            {/* <Typography style={{ color: "black" }}>
+              Back to CollegeSpace
+            </Typography> */}
+            <Grid item xs={1} md={3}></Grid>
+            <Grid item xs={9} md={6}>
+              <SearchBar
+                maxWidth="1000px"
+                name="query"
+                value={query}
+                onRequestSearch={handleRequestSearch}
+                onCancelSearch={handleCancelSearch}
+                className={classes.search}
+                placeholder="Search"
               />
-            </Paper>
-          </Popover>
+            </Grid>
+            <Grid item xs={2} md={2}>
+              <Grid item md={2}></Grid>
+              <Button onClick={handleOnClick}>
+                <TuneIcon />
+              </Button>
+            </Grid>
+          </Grid>
         </Toolbar>
       </AppBar>
+      <Popover
+        open={open}
+        anchorE1={anchorE1}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: "center",
+          horizontal: "center",
+        }}
+        transformOrigin={{
+          vertical: "center",
+          horizontal: "center",
+        }}
+      >
+        <Paper
+          style={{
+            padding: "20px",
+            background: "#f6f6f6",
+            maxWidth: "900px",
+          }}
+        >
+          <Filters
+            values={values}
+            setValues={setValues}
+            handleChange={handleChange}
+          />
+        </Paper>
+      </Popover>
       <ContentCard contentList={filterByYear} />
     </div>
   );

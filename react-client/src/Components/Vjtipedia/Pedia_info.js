@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./Pedia_info.css";
+import { Container } from "@material-ui/core";
+import { Link } from "react-router-dom";
+import { Button } from "../Homepage/Button";
 
 const Pedia_info = () => {
   const [info, setInfo] = useState(false);
@@ -29,20 +32,27 @@ const Pedia_info = () => {
         </h1>
       </div>
 
-      {/* <div className="supportfooter">
-        <h3>Contact us on our email</h3>
-
-        <h3>at</h3>
-        <h3 className="email">collegespacevjti@gmail.com</h3>
-      </div> */}
-
-      <button
+      {/* <button
         onClick="location.href='http://vjtimumbai.in';"
         type="submit"
         style={{ background: loader ? "#ccc" : "rgb(2,2,110)" }}
       >
         Know More
-      </button>
+      </button> */}
+
+      {/* <a
+        href="https://vjtimumbai.in"
+        className="btn btn-primary"
+        style={{ background: loader ? "#ccc" : "rgb(2,2,110)" }}
+        target="_blank"
+      >
+        KNOW MORE
+      </a> */}
+      <Container>
+        <a class="btn-mobile" href="https://vjtimumbai.in">
+          <button class="btn btn--outline btn--medium">Know More</button>
+        </a>
+      </Container>
     </div>
   );
 };

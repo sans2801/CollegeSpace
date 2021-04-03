@@ -135,7 +135,7 @@ h1 {
   display: flex;
   flex-flow: column;
   align-items: center;
-  max-width: 1120px;
+  max-width: 1300px;
   width: 90%;
   margin: 0 auto;
 }
@@ -213,9 +213,7 @@ h1 {
 .cards__item__img:hover {
   transform: scale(1.1);
 }
-.MuiGrid-item {
-  height: fit-content;
-}
+
 .cards__item__info {
   padding: 20px 30px 30px;
   height: 13vh;

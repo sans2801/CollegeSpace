@@ -1,6 +1,7 @@
 import React from "react";
 import Typical from "react-typical";
 import "./Hero.css";
+import Arrow from "../UI elements/Arrow";
 
 const Hero = () => {
   return (
@@ -18,7 +19,8 @@ const Hero = () => {
       <div className="heroa-btns">
         <p>
           {/* Get Started <i class="fa fa-arrow-down" aria-hidden="true" /> */}
-          <i class="fas fa-angle-double-down"></i>
+          {/* <i class="fas fa-angle-double-down"></i> */}
+          <Arrow />
         </p>
       </div>
     </div>

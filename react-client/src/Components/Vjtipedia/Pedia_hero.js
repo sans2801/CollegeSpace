@@ -1,6 +1,7 @@
 import React from "react";
 import Typical from "react-typical";
 import "./Pedia_hero.css";
+import Arrow from "../UI elements/Arrow";
 
 const Pedia_hero = () => {
   window.scroll({
@@ -23,7 +24,8 @@ const Pedia_hero = () => {
       <div className="pedia-btns">
         <p>
           {/* Get Started <i class="fa fa-arrow-down" aria-hidden="true" /> */}
-          <i class="fas fa-angle-double-down"></i>
+          {/* <i class="fas fa-angle-double-down"></i> */}
+          <Arrow />
         </p>
       </div>
     </div>

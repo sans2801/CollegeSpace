@@ -42,12 +42,18 @@ const Filters = ({ values, setValues, handleChange }) => {
       <FormLabel component="legend">Branch</FormLabel>
       <RadioGroup
         name="branch"
-        value={values.branch}
-        onChange={handleChange}
+        value={values.branch[0]}
+        onChange={(e) => {
+          const { name, value } = e.target;
+          setValues({
+            ...values,
+            [name]: [value],
+          });
+        }}
         style={{ flexDirection: "row" }}
       >
         <FormControlLabel
-          value="comps"
+          value="cs"
           control={<Radio />}
           label="Computer Engineering"
         />

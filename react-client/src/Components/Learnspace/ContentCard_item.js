@@ -14,7 +14,7 @@ const ContentCard_item = (props) => {
               <img
                 className="cardsa__item__img"
                 alt="Travel Image"
-                src={props.src}
+                src={props.srce}
               />
             </a>
           </figure>

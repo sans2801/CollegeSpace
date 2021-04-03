@@ -17,6 +17,7 @@ import Support from "./Components/Support/Support";
 import Head from "./Components/Learnspace/Head";
 import pedia from "./Components/Vjtipedia/Pedia";
 import Pedia from "./Components/Vjtipedia/Pedia";
+import Society from "./Components/Societies/Society";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -42,7 +43,7 @@ function App() {
           </Route>
 
           <Route exact path="/learnspace">
-            <Head />
+            {user ? <Head /> : <Redirect to="/Signup" />}
           </Route>
 
           <Route exact path="/Signup">
@@ -62,11 +63,7 @@ function App() {
           </Route>
 
           <Route exact path="/aboutus">
-            {user ? (
-              <Redirect to="/" />
-            ) : (
-              <About user={user} onChange={handleUser} />
-            )}
+            <About user={user} onChange={handleUser} />
           </Route>
 
           <Route exact path="/support">
@@ -75,6 +72,10 @@ function App() {
 
           <Route exact path="/vjtipedia">
             <Pedia />
+          </Route>
+
+          <Route exact path="/societies">
+            <Society />
           </Route>
         </Switch>
       </Router>

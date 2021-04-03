@@ -33,7 +33,7 @@ function Cards(props) {
             <Carditem
               src="https://media.istockphoto.com/photos/diverse-education-shoot-picture-id871461580?b=1&k=6&m=871461580&s=170667a&w=0&h=_8yav_XQjGnDKR_1tMb5sms63QDAvUw3OJaCmpy1_vQ="
               text="Societies and Clubs"
-              path="/products"
+              path="/societies"
             />
             <Carditem
               src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8YnVpbGRpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
