@@ -15,9 +15,12 @@ import axios from "axios";
 import About from "./Components/About/About";
 import Support from "./Components/Support/Support";
 import Head from "./Components/Learnspace/Head";
-import pedia from "./Components/Vjtipedia/Pedia";
+
 import Pedia from "./Components/Vjtipedia/Pedia";
 import Society from "./Components/Societies/Society";
+import Internship from "./Components/Internships/Internship";
+import Singlepost from "./Components/Internships/Singlepost";
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -76,6 +79,12 @@ function App() {
 
           <Route exact path="/societies">
             <Society />
+          </Route>
+          <Route exact path="/internships">
+            <Internship />
+          </Route>
+          <Route exact path="/singlepost">
+            <Singlepost />
           </Route>
         </Switch>
       </Router>

@@ -134,15 +134,19 @@ const Learnspace = () => {
   const resultsItem = results.map((content) => content.item);
   const contentResults = query ? resultsItem : contentList;
   // setContentList(contentResults);
-  // console.log(contentResults);
+  
   const filterByType =
     values.type === "all"
       ? contentResults
       : contentResults.filter((content) => content.type === values.type);
 
   console.log(values.type, filterByType, "filterByType");
+  console.log(filterByType);
+  console.log(contentResults);
+  // console.log(filterByBranch);
   const filterByBranch =
     values.branch[0] === "all"
+    
       ? filterByType
       : filterByType.filter((content) => {
           var br = true;
@@ -154,7 +158,7 @@ const Learnspace = () => {
         });
 
   console.log(values.branch, filterByBranch, "filterByBranch");
-  console.log(filterByType, "filterByType");
+  
   const filterByYear =
     values.year === "all"
       ? filterByBranch
