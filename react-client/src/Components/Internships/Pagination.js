@@ -1,6 +1,5 @@
 import React from 'react';
 import "./Pagination.css";
-import "./Intern.css";
 
 const Pagination = () => {
     return (
