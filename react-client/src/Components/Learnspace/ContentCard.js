@@ -41,7 +41,7 @@ const ContentCard = ({ contentList }) => {
       <div className="cards__container">
         <ul className="cards__items">
           <Grid container direction="row">
-            {contentList.length > 1 ? (
+            {contentList.length > 0 ? (
               contentList.map((content) => (
                 <Grid item xs={6} md={4}>
                   <ContentCard_item

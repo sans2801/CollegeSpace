@@ -85,7 +85,7 @@ function App() {
           <Route exact path="/internships">
             <Internship />
           </Route>
-          <Route exact path={"/singlepost"}>
+          <Route exact path="/singlepost/:id">
             <Singlepost 
             />
           </Route>

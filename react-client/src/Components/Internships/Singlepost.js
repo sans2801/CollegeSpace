@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 // import "./Internship.css";
-import { Typography, Container, makeStyles } from "@material-ui/core";
+import { Typography, Container, makeStyles, Box } from "@material-ui/core";
+import { useParams, useLocation } from "react-router-dom";
 import Comment from './Comment';
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -10,6 +12,15 @@ const useStyles = makeStyles((theme) => ({
         ".forms > input textarea": {
             background: "red"
         }
+    },
+    title: {
+        color: "#0099ff",
+        textAlign: "centre",
+        font: "poppins",
+    },
+    author: {
+        color: "#99ccff",
+        textAlign: "centre",
     },
 }))
 
@@ -37,20 +48,34 @@ const CommentList = [
 ]
 
 
-const Singlepost = () => {
-    const [ comments, setComments ] = useState(CommentList)
-    const [ newComment, updateNewComment ] = useState()
+const Singlepost = (props) => {
+    const [comments, setComments] = useState(CommentList);
+    const [newComment, updateNewComment] = useState();
+    const [pending, setPending] = useState(true);
+    const { id } = useParams();
+    const [blog, setBlog] = useState(null);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        axios.get(`http://localhost:3001/users/getblog/${id}`).then((response) => {
+            setBlog(response.data);
+            setPending(false);
+        }).catch((err) => {
+            console.log(err.message);
+            setError(err.message);
+        });
+    }, [])
 
     const handleChange = (e) => {
         updateNewComment(e.target.value)
     }
-    
+
     const handleClick = (e) => {
         e.preventDefault()
         console.log(e.target)
         setComments([
             {
-                name: "Naya aadmi",
+                name: "New User",
                 text: newComment,
                 time: Date()
             },
@@ -62,31 +87,37 @@ const Singlepost = () => {
     return (
         // <Container>
         <Container className={classes.root}>
-            <Typography variant="h2">Post Title</Typography>
-            <Typography variant="h5">
-                by
-                <a href="#!">Start Bootstrap</a>
-            </Typography>
+
+
+            {pending && <h3>Fetching blog...</h3>}
+
+            {blog &&
+
+                <div>
+
+                    <Box className={classes.title} my={1}><Typography variant="h2">{blog.title}</Typography></Box>
+
+                    <Box className={classes.author} my={1} ><Typography variant="h5">
+                        By
+                {blog.author}
+                    </Typography>
+                        <hr />
+                        <Typography variant="h5">
+                            {"Posted on  " + blog.time}
+                        </Typography></Box>
+                    <hr />
+
+
+                    <Box mr={4} my={6}><Typography variant="h6">{blog.text}</Typography></Box>
+                </div>
+
+            }
+
+            {error && <h3>error</h3>}
+
             <hr />
-            <Typography variant="h5">
-                Posted on January 1, 2021 at 12:00 PM
-            </Typography>
             <hr />
-                            Start Bootstrap
-            <Typography variant="h5"></Typography>
-        
-            <blockquote className="blockquote">
-                <Typography variant="h5" className="mb-0">kya bola?</Typography>
-                <footer className="blockquote-footer">
-                    Someone famous in
-                    <cite title="Source Title">Source Title</cite>
-                </footer>
-            </blockquote>
-            <Typography variant="h5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</Typography>
-            <Typography variant="h5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</Typography>
-            <hr />
-            <hr />
-             <div className="card my-4">
+            {/* <div className="card my-4">
                 <h5 className="card-header">Leave a Comment:</h5>
                 <div className="card-body">
                     <form>
@@ -94,17 +125,17 @@ const Singlepost = () => {
                         <button className="btn btn-primary" type="submit" onClick={handleClick}>Submit</button>
                     </form>
                 </div>
-            </div>
+            </div> */}
             {/* -----------------------Comments-------------------------- */}
-            {comments.map(singleComment => (
+            {/* {comments.map(singleComment => (
                 <Comment
                     name={singleComment.name}
                     text={singleComment.text}
                     time={singleComment.time}
                 /> 
-            ))}
-               
-        </Container> 
+            ))} */}
+
+        </Container>
     )
 }
 
