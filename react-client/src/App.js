@@ -22,6 +22,8 @@ import Internship from "./Components/Internships/Internship";
 import Singlepost from "./Components/Internships/Singlepost";
 
 
+
+
 function App() {
   const [user, setUser] = useState(null);
 
@@ -83,8 +85,9 @@ function App() {
           <Route exact path="/internships">
             <Internship />
           </Route>
-          <Route exact path="/singlepost">
-            <Singlepost />
+          <Route exact path={"/singlepost"}>
+            <Singlepost 
+            />
           </Route>
         </Switch>
       </Router>

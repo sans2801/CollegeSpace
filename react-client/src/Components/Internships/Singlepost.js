@@ -73,9 +73,8 @@ const Singlepost = () => {
             </Typography>
             <hr />
                             Start Bootstrap
-            <Typography variant="h5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</Typography>
-            <Typography variant="h5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</Typography>
-            <Typography variant="h5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</Typography>
+            <Typography variant="h5"></Typography>
+        
             <blockquote className="blockquote">
                 <Typography variant="h5" className="mb-0">kya bola?</Typography>
                 <footer className="blockquote-footer">

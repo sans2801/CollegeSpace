@@ -10,11 +10,6 @@ const Internship = () => {
     return (
         <>
             <Blogpost />
-            <Blogpost />
-            <Blogpost />
-            <Blogpost />
-            <Blogpost />
-            <Blogpost />
             <Pagination />
             <Footer />
         </>
