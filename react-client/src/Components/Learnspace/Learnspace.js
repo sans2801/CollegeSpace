@@ -1,15 +1,10 @@
 import {
   AppBar,
-  Input,
   makeStyles,
-  Tab,
-  Tabs,
   Toolbar,
-  Typography,
   Popover,
   Button,
   Paper,
-  Container,
   Grid,
 } from "@material-ui/core";
 import SearchBar from "material-ui-search-bar";
@@ -94,7 +89,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Learnspace = () => {
   const [contentList, setContentList] = useState(initialContentList);
-  // const fetchContentList = ;
 
   useEffect(() => {
     axios.get("http://localhost:3001/users/getbooks").then((response) => {

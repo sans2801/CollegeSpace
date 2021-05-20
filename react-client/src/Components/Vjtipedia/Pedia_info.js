@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import "./Pedia_info.css";
 import { Container } from "@material-ui/core";
-import { Link } from "react-router-dom";
-import { Button } from "../Homepage/Button";
 
 const Pedia_info = () => {
   const [info, setInfo] = useState(false);
-  const [loader, setLoader] = useState(false);
 
   const changeFont = () => {
     if (window.innerWidth <= 960) {

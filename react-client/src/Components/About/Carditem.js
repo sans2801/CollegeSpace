@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Typical from "react-typical";
 
 function CardItem(props) {
   return (
@@ -13,7 +11,7 @@ function CardItem(props) {
           >
             <img
               className="cardsa__item__img"
-              alt="Travel Image"
+              alt="Travel"
               src={props.src}
             />
           </figure>
