@@ -15,7 +15,9 @@ const Internship = () => {
             <Blogpost />
             <Blogpost />
             <Blogpost />
-            <Pagination />
+            <Pagination 
+                
+            />
             <Footer />
         </>
     )
