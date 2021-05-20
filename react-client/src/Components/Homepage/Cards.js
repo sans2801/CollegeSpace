@@ -21,7 +21,7 @@ function Cards(props) {
             <Carditem
               src="https://images.unsplash.com/photo-1521898284481-a5ec348cb555?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
               text="ChatSpace | Discuss Among your classmates"
-              path="/services"
+              path="/chatspace"
             />
           </ul>
           <ul className="cards__items">
@@ -38,7 +38,7 @@ function Cards(props) {
             <Carditem
               src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8YnVpbGRpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
               text="Internships and Placement Stories"
-              path="/sign-up"
+              path="/internships"
             />
           </ul>
         </div>

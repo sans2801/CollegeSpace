@@ -106,10 +106,10 @@ function Navbar(props) {
             </li>
           </ul>
           {button && !props.user && (
-            <Button buttonStyle="btn--outline">SIGN UP</Button>
+            <Button buttonStyle="btn--out">SIGN UP</Button>
           )}
           {button && props.user && (
-            <Button onClick={handleLogout} buttonStyle="btn--outline">
+            <Button onClick={handleLogout} buttonStyle="btn--out">
               LOG OUT
             </Button>
           )}

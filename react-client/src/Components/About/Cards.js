@@ -1,7 +1,6 @@
 import React from "react";
 import "./Cards.css";
 import Carditem from "./Carditem";
-import { Link } from "react-router-dom";
 import Nikhil from "./Nikhil.jpeg";
 
 function Cards(props) {

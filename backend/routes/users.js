@@ -148,4 +148,32 @@ router.post("/feedback", (req, res, next) => {
   }
 });
 
+router.get('/getblogs', (req,res,next)=>{
+  db.collection('blogs').get().then((querySnapshot)=>{
+    const blogs = [];
+    querySnapshot.forEach((doc)=>{
+      const blog=doc.data();
+      blog['id']=doc.id;
+      blogs.push(blog);
+    });
+    res.send(blogs);
+  }).catch((err)=>{
+    res.send({error:err.message});
+  })
+});
+
+router.get('/getblog/:id', (req,res,next) =>{
+
+  db.collection('blogs').doc(req.params.id).get().then((blog)=>{
+    if(blog.exists){
+      res.json(blog.data());
+    }
+    else res.json({error:'Blog does not exist'});
+  })
+  .catch((err)=>{
+    res.json({error:err.message});
+  });
+
+});
+
 module.exports = router;

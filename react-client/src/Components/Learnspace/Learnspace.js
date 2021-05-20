@@ -1,15 +1,10 @@
 import {
   AppBar,
-  Input,
   makeStyles,
-  Tab,
-  Tabs,
   Toolbar,
-  Typography,
   Popover,
   Button,
   Paper,
-  Container,
   Grid,
 } from "@material-ui/core";
 import SearchBar from "material-ui-search-bar";
@@ -94,7 +89,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Learnspace = () => {
   const [contentList, setContentList] = useState(initialContentList);
-  // const fetchContentList = ;
 
   useEffect(() => {
     axios.get("http://localhost:3001/users/getbooks").then((response) => {
@@ -134,15 +128,19 @@ const Learnspace = () => {
   const resultsItem = results.map((content) => content.item);
   const contentResults = query ? resultsItem : contentList;
   // setContentList(contentResults);
-  // console.log(contentResults);
+  
   const filterByType =
     values.type === "all"
       ? contentResults
       : contentResults.filter((content) => content.type === values.type);
 
   console.log(values.type, filterByType, "filterByType");
+  console.log(filterByType);
+  console.log(contentResults);
+  // console.log(filterByBranch);
   const filterByBranch =
     values.branch[0] === "all"
+    
       ? filterByType
       : filterByType.filter((content) => {
           var br = true;
@@ -154,7 +152,7 @@ const Learnspace = () => {
         });
 
   console.log(values.branch, filterByBranch, "filterByBranch");
-  console.log(filterByType, "filterByType");
+  
   const filterByYear =
     values.year === "all"
       ? filterByBranch
