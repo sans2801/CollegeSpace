@@ -8,7 +8,7 @@ const Chathero = () => {
     <div className="heroa-container">
       <h1>
         <Typical
-          steps={["ChatSpace Is Coming Soon!", 1000]}
+          steps={["ChatSpace is coming soon!", 1000]}
           loop={3}
           wrapper="b"
         />
