@@ -1,0 +1,82 @@
+.supportbody {
+  background-color: black;
+  width: 100%;
+  /* justify-content: center; */
+  min-height: 40rem;
+  max-width: auto;
+  margin: auto;
+}
+
+.supportbody .description > h1 {
+  display: flexbox;
+  color: cornsilk;
+  text-align: center;
+  padding-top: 100px;
+  font-size: 35px;
+}
+
+.supportbody .description.active > h1 {
+  font-size: 25px;
+}
+
+.supportbody > h1 span {
+  color: #fb2020;
+}
+.supportbody .supportfooter .email {
+  color: #fb2020;
+  text-decoration: underline overline #fb2020;
+  margin-top: 10px;
+  text-underline-offset: 0.4em;
+}
+.supportbody .supportfooter > h3 {
+  color: cornsilk;
+  text-align: center;
+  font-size: 32px;
+}
+.supportfooter {
+  margin-top: 3%;
+}
+
+.btn-mobile {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .supportbody > .btn {
+  padding: 20px;
+  border: none;
+  align-items: center;
+  background-color: rgb(2, 2, 110);
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 6px;
+  color: #fff;
+  position: absolute;
+  margin-top: 20vh;
+  margin-left: 45%;
+
+  cursor: pointer;
+  text-decoration: none;
+} */
+
+.supportbody .btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 145, 0);
+}
+.supportbody > .btn-mobile {
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: #fff;
+  transition: all 0.3s ease-out;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.MuiContainer-root {
+  padding-top: 5rem;
+  text-align: center;
+}

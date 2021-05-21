@@ -1,0 +1,96 @@
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+/* .back {
+  filter: blur(8px);
+} */
+
+.heroit-container {
+  background: url("../../images/Intern11.jpg") center center/cover no-repeat;
+  height: 100vh;
+  width: 100%;
+  margin-top: -80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+  /* border-radius: 20px; */
+}
+
+.heroit-container > h2 {
+  color: #fff;
+  height: 250px;
+  /* font-size: 70px; */
+  font-size: 5vmax;
+  margin-top: 60px;
+  display: flex;
+  text-align: center;
+}
+
+p {
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+}
+
+.heroit-container > p {
+  text-align: center;
+  color: #fff;
+  font-size: 64px;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.heroit-btns {
+  background-color: transparent;
+  margin-top: 32px;
+  justify-content: center;
+  text-align: center;
+}
+
+.heroit-btns .btn > p {
+  color: rgb(255, 255, 255);
+}
+
+.heroit-btns .btn {
+  background-color: transparent;
+  margin: 6px;
+}
+
+.fa-play-circle {
+  margin-left: 4px;
+}
+
+@media screen and (max-width: 960px) {
+  .heroit-container > h1 {
+    font-size: 70px;
+    margin-top: -150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroit-container > h1 {
+    font-size: 50px;
+    margin-top: -100px;
+  }
+
+  .heroit-container > p {
+    font-size: 30px;
+  }
+
+  .btn-mobile {
+    display: block;
+    text-decoration: none;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
