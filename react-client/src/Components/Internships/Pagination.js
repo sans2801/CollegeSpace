@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Pagination = ({ data }) => {
-  const dataLimit = 2;
+  const dataLimit = 3;
   const [blogs, setblogs] = useState([]);
   const [pending, setPending] = useState(true);
   const [pages, setPages] = useState(0);
@@ -50,10 +50,7 @@ const Pagination = ({ data }) => {
             <div className="card mb-4" key={idx}>
               <div className="card-body">
                 <h2 className="card-title">{singleblog.title}</h2>
-                <p className="card-text">{`${singleblog.text.slice(
-                  0,
-                  200
-                )}...`}</p>
+                <p className="card-text">{singleblog.smalltext}</p>
                 <Link
                   className="btn btn-primary"
                   to={{
@@ -65,7 +62,7 @@ const Pagination = ({ data }) => {
                 </Link>
               </div>
               <div className="card-footer text-muted">
-                {`Posted on January 1, 2021 by  ${singleblog.author}`}
+                {`Posted on ${singleblog.time} by  ${singleblog.author}`}
               </div>
             </div>
           ))}
@@ -78,7 +75,7 @@ const Pagination = ({ data }) => {
             onClick={goToPreviousPage}
             disabled={currentPage === 1 ? true : false}
           >
-            ← Newer
+            ← Older
           </Button>
         </li>
         <li className="page-item">
@@ -88,7 +85,7 @@ const Pagination = ({ data }) => {
             onClick={goToNextPage}
             disabled={currentPage === pages ? true : false}
           >
-            Older →
+            Newer →
           </Button>
         </li>
       </ul>

@@ -9,7 +9,7 @@ const Internhero = () => {
       <div className="heroit-container">
         <h2>
           <Typical
-            steps={["The expert in anything was once a beginner", 1000]}
+            steps={["Every expert was once a beginner", 1000]}
             loop={3}
             wrapper="b"
           />

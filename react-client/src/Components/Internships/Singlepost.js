@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
         color: "#99ccff",
         textAlign: "centre",
     },
+    text:{
+        fontSize: "4px",
+        textAlign: "centre",
+    },
 }))
 
 const CommentList = [
@@ -82,6 +86,15 @@ const Singlepost = (props) => {
         console.log(comments)
     }
     const classes = useStyles()
+    
+    if(!pending && blog!=null)
+    {
+        document.getElementById("title").innerHTML=blog.title;
+        document.getElementById("author").innerHTML=`By ${blog.author}`;
+        document.getElementById("date").innerHTML=`Posted on ${blog.time}`
+        document.getElementById("text").innerHTML=blog.text;
+    }
+    
     return (
         // <Container>
         <Container className={classes.root}>
@@ -93,20 +106,18 @@ const Singlepost = (props) => {
 
                 <div>
 
-                    <Box className={classes.title} my={1}><Typography variant="h2">{blog.title}</Typography></Box>
+                    <Box className={classes.title} my={1}><Typography variant="h2" id="title"></Typography></Box>
 
-                    <Box className={classes.author} my={1} ><Typography variant="h5">
-                        By
-                {blog.author}
+                    <Box className={classes.author} my={1}><Typography variant="h5" id="author">
+                        
                     </Typography>
                         <hr />
-                        <Typography variant="h5">
-                            {"Posted on  " + blog.time}
+                        <Typography variant="h5" id="date">
                         </Typography></Box>
                     <hr />
 
 
-                    <Box mr={4} my={6}><Typography variant="h6">{blog.text}</Typography></Box>
+                    <Box className= {classes.text} mr={4} my={6}><Typography variant="h6" id="text"></Typography></Box>
                 </div>
 
             }
