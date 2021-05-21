@@ -97,8 +97,8 @@ h1 {
 
 .cardsl__item__text {
   color: #252e48;
-  font-size: 2vmax;
-  line-height: 20px;
+  font-size: 1.2vmax;
+  line-height: 22px;
 }
 
 @media only screen and (min-width: 1200px) {
