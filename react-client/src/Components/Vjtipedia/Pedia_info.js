@@ -31,7 +31,7 @@ const Pedia_info = () => {
 
       <Container>
         <a class="btn-mobile" href="https://vjtimumbai.in">
-          <button class="btn btn--outline btn--medium">Know More</button>
+          <button class="btn btn--out btn--med">{`Know More-->`}</button>
         </a>
       </Container>
     </div>
