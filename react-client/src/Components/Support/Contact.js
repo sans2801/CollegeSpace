@@ -54,7 +54,7 @@ const Contact = () => {
 
       
       {error && <small style={{color:'white',}}>{error}</small>}
-      {!isPending && <small>Sending...</small>}
+      {/* {!isPending && <small>Sending...</small>} */}
 
     </form>
   );
