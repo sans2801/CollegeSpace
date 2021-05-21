@@ -112,7 +112,7 @@ router.get('/getbooks',(req,res,next)=>{
   const user = firebase.auth().currentUser;
   if(user===null) res.json({error:'User not found'});
 
-    db.collection('books2').get().then((querySnapshot)=>{
+    db.collection('Textbooks').get().then((querySnapshot)=>{
       const material = [];
       querySnapshot.forEach((doc)=>{
         material.push(doc.data());
