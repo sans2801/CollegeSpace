@@ -78,7 +78,7 @@ const Pagination = ({ data }) => {
             onClick={goToPreviousPage}
             disabled={currentPage === 1 ? true : false}
           >
-            ← Older
+            ← Newer
           </Button>
         </li>
         <li className="page-item">
@@ -88,7 +88,7 @@ const Pagination = ({ data }) => {
             onClick={goToNextPage}
             disabled={currentPage === pages ? true : false}
           >
-            Newer →
+            Older →
           </Button>
         </li>
       </ul>
