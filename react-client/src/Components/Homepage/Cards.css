@@ -1,6 +1,7 @@
 .cards {
   padding: 4rem;
   background: rgb(236, 234, 234);
+  border-radius: 20px;
 }
 
 h1 {
@@ -12,7 +13,7 @@ h1 {
   flex-flow: column;
   align-items: center;
   max-width: 1120px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 

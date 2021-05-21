@@ -8,9 +8,9 @@ const Society_hero = () => {
     <div className="society-container">
       <h1>
         <Typical
-          steps={["Hi There!", 1000, "Thanks for visiting!", 1000]}
+          steps={["Where We All Collaborate", 1000]}
           loop={Infinity}
-          wrapper="p"
+          wrapper="b"
         />
       </h1>
       <div className="society-btns">

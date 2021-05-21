@@ -1,4 +1,4 @@
-.cards {
+.cardsl {
   padding: 4rem;
   background: rgb(236, 234, 234);
 }
@@ -7,25 +7,25 @@ h1 {
   text-align: center;
 }
 
-.cards__container {
+.cardsl__container {
   display: flex;
   flex-flow: column;
   align-items: center;
   max-width: 1300px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
-.cards__wrapper {
+.cardsl__wrapper {
   position: relative;
   margin: 50px 0 45px;
 }
 
-.cards__items {
+.cardsl__items {
   margin-bottom: 24px;
 }
 
-.cards__item {
+.cardsl__item {
   background: white;
   display: flex;
   flex: 1;
@@ -33,7 +33,7 @@ h1 {
   border-radius: 10px;
 }
 
-.cards__item__link {
+.cardsl__item__link {
   display: flex;
   flex-flow: column;
   width: 100%;
@@ -45,7 +45,7 @@ h1 {
   text-decoration: none;
 }
 
-.cards__item__pic-wrap {
+.cardsl__item__pic-wrap {
   position: relative;
   width: 100%;
   padding-top: 67%;
@@ -57,7 +57,7 @@ h1 {
   animation-duration: 2s;
 }
 
-.cards__item__pic-wrap::after {
+.cardsl__item__pic-wrap::after {
   content: attr(data-category);
   position: absolute;
   bottom: 0;
@@ -71,7 +71,7 @@ h1 {
   box-sizing: border-box;
 }
 
-.cards__item__img {
+.cardsl__item__img {
   position: absolute;
   top: 0;
   right: 0;
@@ -86,19 +86,19 @@ h1 {
   transition: all 0.2s linear;
 }
 
-.cards__item__img:hover {
+.cardsl__item__img:hover {
   transform: scale(1.1);
 }
 
-.cards__item__info {
+.cardsl__item__info {
   padding: 20px 30px 30px;
   height: 13vh;
 }
 
-.cards__item__text {
+.cardsl__item__text {
   color: #252e48;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 2vmax;
+  line-height: 20px;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -108,13 +108,13 @@ h1 {
 }
 
 @media only screen and (min-width: 1024px) {
-  .cards__items {
+  .cardsl__items {
     display: flex;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .cards__item {
+  .cardsl__item {
     margin-bottom: 2rem;
   }
 }

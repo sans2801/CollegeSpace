@@ -10,7 +10,7 @@ const Learn_hero = () => {
         <Typical
           steps={["Hi There!", 1000, "Welcome to Learnspace!", 1000]}
           loop={Infinity}
-          wrapper="p"
+          wrapper="b"
         />
       </h1>
       <div className="herol-btns">

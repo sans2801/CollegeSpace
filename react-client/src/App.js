@@ -10,6 +10,7 @@ import {
 import Home from "./Components/pages/Home";
 import Form from "./Components/Signup/Form";
 import Login from "./Components/Signup/login";
+import Chatspace from "./Components/ChatSpace/Chatspace";
 
 import axios from "axios";
 import About from "./Components/About/About";
@@ -20,9 +21,6 @@ import Pedia from "./Components/Vjtipedia/Pedia";
 import Society from "./Components/Societies/Society";
 import Internship from "./Components/Internships/Internship";
 import Singlepost from "./Components/Internships/Singlepost";
-
-
-
 
 function App() {
   const [user, setUser] = useState(null);
@@ -86,8 +84,11 @@ function App() {
             <Internship />
           </Route>
           <Route exact path="/singlepost/:id">
-            <Singlepost 
-            />
+            <Singlepost />
+          </Route>
+
+          <Route exact path="/chatspace">
+            <Chatspace />
           </Route>
         </Switch>
       </Router>

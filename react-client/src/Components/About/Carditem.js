@@ -9,11 +9,7 @@ function CardItem(props) {
             className="cardsa__item__pic-wrap"
             data-category={props.label}
           >
-            <img
-              className="cardsa__item__img"
-              alt="Travel"
-              src={props.src}
-            />
+            <img className="cardsa__item__img" alt="Travel" src={props.src} />
           </figure>
           <div className="cardsa__item__info">
             <h5 className="cardsa__item__text">

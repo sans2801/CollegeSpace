@@ -96,7 +96,7 @@
 
 /* Social Icons */
 .social-icon-link {
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-size: 24px;
 }
 
@@ -132,7 +132,8 @@
   font-size: 2rem;
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 7px;
+  text-align: center;
 }
 
 .website-rights {
@@ -162,5 +163,27 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+.Facebook {
+  color: rgb(13, 121, 209);
+  font-size: 20px;
+}
+
+.Instagram {
+  color: white;
+  font-size: 20px;
+}
+
+.Youtube {
+  color: #eb3223;
+  font-size: 20px;
+}
+
+.Twitter {
+  color: rgb(10, 190, 214);
+  font-size: 20px;
+}
+
+.LinkedIn {
+  color: rgb(13, 121, 209);
+  font-size: 20px;
 }

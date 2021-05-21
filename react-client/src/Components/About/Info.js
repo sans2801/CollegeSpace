@@ -28,8 +28,8 @@ const Info = () => {
         <div className="supportfooter">
           <h3>Contact us on our email</h3>
 
-          <h3>at</h3>
           <h3 className="email">collegespacevjti@gmail.com</h3>
+          <h4> h </h4>
         </div>
       </div>
     </div>

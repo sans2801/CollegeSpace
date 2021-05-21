@@ -6,8 +6,12 @@ video {
   z-index: -1;
 }
 
-.pedia-container {
-  background: url("./sealink.jpg") center center/cover no-repeat;
+/* .back {
+  filter: blur(8px);
+} */
+
+.heroit-container {
+  background: url("../../images/Intern11.jpg") center center/cover no-repeat;
   height: 100vh;
   width: 100%;
   margin-top: -80px;
@@ -17,13 +21,16 @@ video {
   align-items: center;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   object-fit: contain;
+  /* border-radius: 20px; */
 }
 
-.pedia-container > h1 {
+.heroit-container > h2 {
   color: #fff;
-  height: 170px;
-  font-size: 7vmax;
+  height: 250px;
+  /* font-size: 70px; */
+  font-size: 5vmax;
   margin-top: 60px;
+  display: flex;
   text-align: center;
 }
 
@@ -32,7 +39,7 @@ p {
   font-size: 60px;
 }
 
-.pedia-container > p {
+.heroit-container > p {
   text-align: center;
   color: #fff;
   font-size: 64px;
@@ -41,18 +48,18 @@ p {
     "Lucida Sans", Arial, sans-serif;
 }
 
-.pedia-btns {
+.heroit-btns {
   background-color: transparent;
   margin-top: 32px;
   justify-content: center;
   text-align: center;
 }
 
-.pedia-btns .btn > p {
+.heroit-btns .btn > p {
   color: rgb(255, 255, 255);
 }
 
-.pedia-btns .btn {
+.heroit-btns .btn {
   background-color: transparent;
   margin: 6px;
 }
@@ -62,19 +69,19 @@ p {
 }
 
 @media screen and (max-width: 960px) {
-  .pedia-container > h1 {
+  .heroit-container > h1 {
     font-size: 70px;
     margin-top: -150px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .pedia-container > h1 {
+  .heroit-container > h1 {
     font-size: 50px;
     margin-top: -100px;
   }
 
-  .pedia-container > p {
+  .heroit-container > p {
     font-size: 30px;
   }
 

@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div className="footer-container">
       <section className="footer-subscription"></section>
-      <div class="footer-links">
+      {/* <div class="footer-links">
         {/* <div className="footer-link-wrapper">
           <div class="footer-link-items">
             <h2>
@@ -18,8 +18,8 @@ function Footer() {
               <Link to="/support">Support</Link>
             </h2>
           </div>
-        </div> */}
-      </div>
+        </div> 
+      </div> */}
       <section class="social-media">
         <div class="social-media-wrap">
           <div class="footer-logo">
@@ -29,46 +29,31 @@ function Footer() {
           </div>
           <h3 class="website-rights">CollegeSpace &copy; 2021</h3>
           <div class="social-icons">
-            <Link
-              class="social-icon-link facebook"
-              to="/"
-              target="_blank"
-              aria-label="Facebook"
-            >
+            <a href="https://www.facebook.com/fb.vjti/" className="Facebook">
               <i class="fab fa-facebook-f" />
-            </Link>
-            <Link
-              class="social-icon-link instagram"
-              to="/"
-              target="_blank"
-              aria-label="Instagram"
+            </a>
+
+            <a
+              href="https://www.instagram.com/vjtistudentactivities/?hl=en"
+              className="Instagram"
             >
               <i class="fab fa-instagram" />
-            </Link>
-            <Link
-              class="social-icon-link youtube"
-              to="/"
-              target="_blank"
-              aria-label="Youtube"
-            >
+            </a>
+
+            <a href="https://youtube.com" className="Youtube">
               <i class="fab fa-youtube" />
-            </Link>
-            <Link
-              class="social-icon-link twitter"
-              to="/"
-              target="_blank"
-              aria-label="Twitter"
-            >
+            </a>
+
+            <a href="https://twitter.com/vjti?lang=en" className="Twitter">
               <i class="fab fa-twitter" />
-            </Link>
-            <Link
-              class="social-icon-link twitter"
-              to="https://github.com/akshayb80"
-              target="_blank"
-              aria-label="LinkedIn"
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/tpo-vjti-30061971/"
+              className="LinkedIn"
             >
               <i class="fab fa-linkedin" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

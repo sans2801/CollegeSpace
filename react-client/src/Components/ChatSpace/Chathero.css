@@ -6,8 +6,8 @@ video {
   z-index: -1;
 }
 
-.pedia-container {
-  background: url("./sealink.jpg") center center/cover no-repeat;
+.heroa-container {
+  background: url("../../images/ocean.jpg") center center/cover no-repeat;
   height: 100vh;
   width: 100%;
   margin-top: -80px;
@@ -19,7 +19,7 @@ video {
   object-fit: contain;
 }
 
-.pedia-container > h1 {
+.heroa-container > h1 {
   color: #fff;
   height: 170px;
   font-size: 7vmax;
@@ -32,7 +32,7 @@ p {
   font-size: 60px;
 }
 
-.pedia-container > p {
+.heroa-container > p {
   text-align: center;
   color: #fff;
   font-size: 64px;
@@ -41,18 +41,18 @@ p {
     "Lucida Sans", Arial, sans-serif;
 }
 
-.pedia-btns {
+.heroa-btns {
   background-color: transparent;
   margin-top: 32px;
   justify-content: center;
   text-align: center;
 }
 
-.pedia-btns .btn > p {
+.heroa-btns .btn > p {
   color: rgb(255, 255, 255);
 }
 
-.pedia-btns .btn {
+.heroa-btns .btn {
   background-color: transparent;
   margin: 6px;
 }
@@ -62,19 +62,19 @@ p {
 }
 
 @media screen and (max-width: 960px) {
-  .pedia-container > h1 {
+  .heroa-container > h1 {
     font-size: 70px;
     margin-top: -150px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .pedia-container > h1 {
+  .heroa-container > h1 {
     font-size: 50px;
     margin-top: -100px;
   }
 
-  .pedia-container > p {
+  .heroa-container > p {
     font-size: 30px;
   }
 

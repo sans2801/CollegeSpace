@@ -20,7 +20,7 @@ const Pedia_hero = () => {
             1000,
           ]}
           loop={Infinity}
-          wrapper="p"
+          wrapper="b"
         />
       </h1>
       <div className="pedia-btns">

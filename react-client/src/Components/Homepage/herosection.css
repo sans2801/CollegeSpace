@@ -22,7 +22,8 @@ video {
 .hero-container > h2 {
   color: #fff;
   height: 170px;
-  font-size: 7vw;
+  /* font-size: 70px; */
+  font-size: 7vmax;
   margin-top: 60px;
   display: flex;
   text-align: center;

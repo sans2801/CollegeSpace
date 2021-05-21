@@ -1,5 +1,6 @@
 .Container {
-  background: url("Office3.jpg") center center/cover no-repeat;
+  background: url("../../images/ocean.jpg") center center/cover no-repeat;
+  border-radius: 20px;
 }
 
 .card-text {
