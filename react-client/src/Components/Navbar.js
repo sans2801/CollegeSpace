@@ -28,7 +28,7 @@ function Navbar(props) {
     setClick(!click);
     setNavbar(!navbar);
   };
-  const closeMobileMenu = () => setClick(false);
+  const closeMobileMenu = () => setClick(false, changeBackground);
 
   const showButton = () => {
     if (window.innerWidth <= 960) {

@@ -10,11 +10,11 @@ const Head = () => {
     behavior: "smooth",
   });
   return (
-    <div>
+    <>
       <Learn_hero />
       <Learnspace />
       <Footer />
-    </div>
+    </>
   );
 };
 

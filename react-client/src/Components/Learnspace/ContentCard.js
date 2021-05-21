@@ -1,18 +1,15 @@
-import {
-  Card,
-} from "@material-ui/core";
+import { Card } from "@material-ui/core";
 import React from "react";
 import ContentCard_item from "./ContentCard_item";
 import { Grid } from "@material-ui/core";
 
 const ContentCard = ({ contentList }) => {
-
   return (
     <Card>
       <div className="cards__container">
         <ul className="cards__items">
           <Grid container direction="row">
-            {contentList.length > 0 ? (
+            {contentList.length >= 1 ? (
               contentList.map((content) => (
                 <Grid item xs={6} md={4}>
                   <ContentCard_item

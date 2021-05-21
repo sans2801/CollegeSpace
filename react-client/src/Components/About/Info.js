@@ -24,13 +24,13 @@ const Info = () => {
           stop shop for every student for all their academic needs in college!
           For any suggestions or queries
         </h1>
-      </div>
 
-      <div className="supportfooter">
-        <h3>Contact us on our email</h3>
+        <div className="supportfooter">
+          <h3>Contact us on our email</h3>
 
-        <h3>at</h3>
-        <h3 className="email">collegespacevjti@gmail.com</h3>
+          <h3>at</h3>
+          <h3 className="email">collegespacevjti@gmail.com</h3>
+        </div>
       </div>
     </div>
   );

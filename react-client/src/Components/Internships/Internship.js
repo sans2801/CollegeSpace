@@ -3,16 +3,13 @@ import Footer from "../Homepage/Footer";
 import Pagination from "./Pagination";
 import "./Intern.css";
 
-
-
 const Internship = () => {
-    return (
-        <>
-            <Pagination />
-            <Footer />
-        </>
-    )
-}
+  return (
+    <div className="Container">
+      <Pagination />
+      <Footer />
+    </div>
+  );
+};
 
-export default Internship
-
+export default Internship;
