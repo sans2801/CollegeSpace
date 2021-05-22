@@ -6,19 +6,19 @@
 
 <!-- ### Team name: Binary Beasts -->
 
-## Team members
+## :man_technologist: Contributors
 
 - [Akshay Bakshi](https://github.com/akshayb80)
 - [Nikhil Sharma](https://github.com/nikhilgwl)
 - [Prasad Thakare](https://github.com/sans2801)
 - [Purvank Bhiwgade](https://github.com/purvankbhiwgade)
 
-## Mentors
+## :man_teacher: Mentors
 
 - [Tejas Jhamnani](https://github.com/Tejas2909)
 - [Vedesh Gawande](https://github.com/vedesh95)
 
-## About the Project
+## :page_with_curl: About the Project
 
 CollegeSpace strives to provide all that one needs to survive the pressures and meet the expectations of being an engineering student.
 More specifically, it is a socio academic portal for the students of VJTI. The aim of this project is making all the academic resources of the college available at one place that too in an organized way.
@@ -34,7 +34,7 @@ It is a one stop shop for all the academic resources such as the time tables, up
 - Advanced filter with multiple criterias to display Textbooks, Test papers and other resources.
 - View internship and placement stories of previous batches.
 
-## Built With
+## :robot: Built With
 
 #### Tools & Technologies used in this project
 
@@ -44,7 +44,7 @@ It is a one stop shop for all the academic resources such as the time tables, up
 - Firebase
 - HTML CSS
 
-## Project Setup
+## :hammer_and_wrench: Project Setup
 
 ### Prerequisites
 
@@ -68,13 +68,36 @@ It is a one stop shop for all the academic resources such as the time tables, up
 
   #### Open http://localhost:3000 with your browser to see the result
 
-## Future scope
+## :memo: Learning & Takeaways
 
-- Improve the functionality of LearnSpace in terms of displaying the accurate search results for each query
-- Provide inbuilt readers for reading books and notes
-- Adding a Chat Bot for immediate doubts solving
+- #### Akshay Bakshi
+  - ReactJS: Major contribution in buidling & styling the UI components.
+  - Form Validation of Login & Signup Pages.
+  - Explored various libraries of JavaScript:
+    - Animate On Scroll (AOS)
+    - Typed.js
+    - Typical.js
+- #### Prasad Thakare
+  - Integrated Firebase with Express backend.
+  - Creating the express Rest API.
+  - User authentication and dealing with user sessions.
+- #### Purvank Bhiwgade
+  - Contribution in creating the Learnspace. Using fuse.js to develop a working dynamic search bar and classifying the result according to the filters.
+  - Worked on Pagination for Internships Page.
+- #### Nikhil Sharma
+  - Contribution in building the UI compoenents using ReactJS.
+  - Learned different frontend techniques to design webpages.
+  - Majorly worked on designing the Internship & Placement stories page.
 
-## Screenshots
+## :zap: Future scope
+
+- Improve the functionality of LearnSpace in terms of displaying the accurate search results for each query.
+- Provide inbuilt readers for reading books and notes.
+- Adding a Chat Bot for immediate doubts solving.
+- Add Chatspace feature.
+- Website will be deployed on Heroku.
+
+## :city_sunset: Screenshots
 
 ![Home](https://user-images.githubusercontent.com/64036185/119172110-1de59780-ba83-11eb-9f58-03a2121cf337.png)
 
