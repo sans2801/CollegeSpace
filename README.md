@@ -1,7 +1,7 @@
 <!-- # Automatic License Plate Recognition System (ALPR) -->
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](http://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)<br>
 ![Collegespace](https://user-images.githubusercontent.com/64036185/119158540-ee7b5e80-ba73-11eb-97d2-6f657c3207a7.jpg)
 
 <!-- ### Team name: Binary Beasts -->
